@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+
+
+        //선생님풀이
+        //let opr = function(num1, num2, text){
+            /*변수에 넣는 순간 순서가 중요하기 때문에 먼저 선언해줘야함*/
+
+        // function opr(num1, num2, text){
+        //     let result = 0;
+        //     if(text === '+'){
+        //         result = num1 + num2;
+        //     }else if(text === '-'){
+        //         result = num1 - num2;
+        //     }else if(text === '*'){
+        //         result = num1 * num2;
+        //     }else if(text === '/'){
+        //         result = num1 / num2;
+        //     }
+        //     return result;
+        // }
+        //화살표 함수 풀이 하나 추가해서 적어놓기
+
+        // let result1 = opr(10, 30, '+');
+        // console.log(result1);
+        // let result2 = opr(40, 10, '-');
+        // console.log(result2);
+        // let result3 = opr(30, 15, '*');
+        // console.log(result3);
+        // let result4 = opr(10, 2, '/');
+        // console.log(result4);
+
+        let sortArray = (arr) => {
+            for(let j=0; j<=arr.length-2; j++){
+                let base = arr[j]
+                for(let i=j+1; i<arr.length-1; i++){
+                    if(base > arr[i]){
+                        let temp = base
+                        base = arr[i]
+                        arr[i] = temp
+                    }
+                }
+                arr[j] = base
+            }
+            return arr;
+        }
+
+        let array1 = sortArray([3,5,1,9,2,7]);
+        console.log(array1);
+        let array2 = sortArray([9,1,3,2,11,5]);
+        console.log(array2);
+
+
+
+        
+        //내풀이
+        // let mat = function(num1, num2, str){
+        //     if(str == '+'){
+        //         console.log(num1 + num2)
+        //     }else if(str = '-'){
+        //         console.log(num1 - num2)
+        //     }else if(str = '*'){
+        //         console.log(num1 * num2)
+        //     }else if(str = '/'){
+        //         console.log(num1 / num2)
+        //     }
+        // }
+
+        // mat(2,3,'+');
+
+
+    </script>
+</body>
+</html>

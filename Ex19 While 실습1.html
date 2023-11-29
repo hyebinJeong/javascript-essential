@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //선생님 풀이
+        let num1 = parseInt(prompt('첫번째 숫자 입력'));
+        let num2 = parseInt(prompt('두번째 숫자 입력'));
+        alert('결과>>' + (num1 - num2))
+
+        while(num1 != 0 || num2 !=0){
+            num1 = parseInt(prompt('첫번째 숫자 입력'));
+            num2 = parseInt(prompt('두번째 숫자 입력'));
+            alert('결과>>' + (num1 - num2))
+
+        }
+
+        //내 풀이(선생님 도움)
+        // while(true){
+          
+        //     let num1 = parseInt(prompt('첫번째 숫자 입력'));
+        //     let num2 = parseInt(prompt('두번째 숫자 입력'));
+        //     let stop = num1 == 0 && num2 == 0
+        //     if(stop){
+        //         end = confirm('프로그램 끝');
+        //         break;
+
+        // }
+        // result = confirm('결과 >> ' + (num1 - num2));
+        // }
+
+        //for문으로 만드는법
+        //for(;;){ } 이거랑 while(true){ }이거랑 같음
+        //for문 ()안 생략 가능
+        //let num1=10, num2=20;
+        for(let num1 = 1, let num2 = 1; num1 !=0 | num2 != 0;){
+            num1 = parseInt(prompt('첫번째 숫자 입력'));
+            num2 = parseInt(prompt('두번째 숫자 입력'));
+            alert('결과 >> ' + (num1 - num2));
+
+        }
+        alert('프로그램끝!!')
+
+
+    </script>
+</body>
+</html>

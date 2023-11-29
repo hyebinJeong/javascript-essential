@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block;
+            padding: 0 20px 30px 20px;
+            margin: 15px;
+            border: 1px solid #ccc;
+            line-height: 2;
+        }
+
+        div h3{
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 구구단
+        // 출력예시
+        // 2단 <- h3태그
+        // 2 x 1 = 2
+        // 2 - 9단까지 나오게 하기
+
+        // let i;
+        // let k;
+
+        // for(k = 2; k < 10; k++){
+        //     document.write('<div>');    
+        //     document.write('<h3>' + k + '단</h3>');
+        //     for(i = 1; i < 10; i++){
+        //         document.write(k + ' X ' + i + ' = ' + (k*i) + '<br>');
+        //     }
+        //     document.write('</div>');
+        // }
+        
+        
+        //이렇게 백틱 이용해서 표현해도 됨
+
+        for(let k = 2; k < 10; k++){
+            document.write('<div>');
+            document.write('<h3>' + k + '단</h3>');
+            for(let i = 1; i < 10; i++){
+                document.write(`${k} X ${i} = ${k*i} <br>`);
+            }
+            document.write('</div>');
+        }
+        
+    </script>
+</body>
+</html>

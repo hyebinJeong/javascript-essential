@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // let sum = 0;
+        // // sum = sum + 1;
+        // sum += 1;
+        // sum += 2;
+        // sum += 3;
+        // sum += 4;
+        // sum += 5;
+
+        // document.write('1부터 5까지 더하면 ' + sum);
+
+        /* 반복문을 사용하여 1부터 5까지의 합을 출력
+            반복문 : 특정 코드를 조건에 성립할때까지 반복하는 것
+            1. for문 - 주로 반복횟수가 정해져있을때 사용
+            2. while문 - 주로 반복횟수가 명확하지 않을 때 사용 */
+
+        /* for(초깃값; 조건; 증감식){
+            실행할 명령
+        }
+            for(초기화구문; 조건; 반복후 실행할 명령){}
+        
+        언제부터 언제까지 인지 명시된 경우 for문 사용!
+        초기화구문(초깃값): 언제부터
+        검사조건(증감식): 언제까지
+
+        <순서>
+        1. 초깃값
+        2. 조건
+        3. 실행할 명령
+        4. 증감식 */
+        let i;
+        let sum = 0;
+        
+        for(i = 1; i <= 5; i++){
+            sum += i;
+        }
+        document.write('1부터 5까지 더하면 ' + sum);
+        document.write('<br>' + i);
+
+        //i가 5일때까지만 시행되지만, 반복후 작업인 증감식까지 실행되니까 
+        //i의 마지막 값은 6임 **마지막 값 파악 중요 !
+        //for문이 마지막으로 끝나는 곳은 F가 나오는 조건문에서 끝남 **중요**
+        
+
+    
+
+            
+    </script>
+</body>
+</html>

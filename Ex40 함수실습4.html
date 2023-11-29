@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //const getDivisor = function(num){}
+
+        //function getDivisor(){
+            //함수 호이스팅이 가능하다!
+        // }
+
+        //풀이 1
+        const getDivisor = (num) => {
+            //약수를 전부 출력!
+            //1,2,5,10
+            //나누어 떨어지는 수 -> 1부터 자기 자신까지의 숫자 중에.
+
+            arr = [];
+        
+            for(let i = 1; i <=num; i++){
+               if(num % i === 0){
+                arr.push(i)
+               }
+            }
+            console.log(num + ' 의 약수 ' + arr);
+        }
+
+        getDivisor(10);
+        getDivisor(16);
+        getDivisor(25);
+       
+    //풀이 2
+        const getDivisor = (num) => {
+            //약수를 전부 출력!
+            //1,2,5,10
+            //나누어 떨어지는 수 -> 1부터 자기 자신까지의 숫자 중에.
+
+            let div =""
+        
+            for(let i = 1; i <=num; i++){
+               if(num % i === 0){
+                //console.log(i)
+                div += i+""
+               }
+            }
+            console.log(num + ' 의 약수 ' + div);
+        }
+
+        getDivisor(10);
+        getDivisor(16);
+        getDivisor(25);
+       
+
+
+
+    </script>
+</body>
+</html>

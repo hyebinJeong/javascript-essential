@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numArray = [10,20,30];
+        let num = 10
+
+        function testA(array){
+            array[0]=30;
+        }
+        function testB(number){
+            number=30;
+        }
+
+        testA(numArray)
+        testB(num)
+
+        //call by value (값 넘겨줌)
+        //call by reference (주소값 넘겨줌)
+
+        console.log(numArray[0]) //30
+        console.log(num) //10
+
+        
+        
+
+
+    </script>
+</body>
+</html>

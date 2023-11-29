@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //내 풀이 (선생님 수정)
+        // const checkPrimeNumber = (num) => {
+        //     let cnt =0
+        //     for(i=2; i <num; i++){
+        //         if(num % i !== 0){
+                    
+        //           //  break;
+                  
+        //         }else{
+        //             cnt++
+                    
+        //         } 
+        //     }
+
+        //     if(cnt>=1){
+        //         alert('소수가 아닙니다!')
+        //     }
+        //     else{
+        //         alert('소수가 맞습니다!');
+        //     }
+        // } 
+
+       
+        // checkPrimeNumber(9);
+
+    // 선생님 풀이
+
+    // const getDivisor = (num) => {
+            
+    //     let div = []
+    //     for(let i = 1; i <=num; i++){
+    //         if(num % i === 0){
+    //         div.push(i)
+    //         }
+    //     }
+    //    if(div.length == 2){
+    //         alert('소수입니다')
+    //    }else{
+    //         alert('소수가 아닙니다')
+    //    }
+    //    checkPrimeNumber(7)
+    // }
+    // //다시 적기(카카오톡 사진 참고)
+
+        let startNum = 2;
+        let endNum = 30;
+
+        const checkPrimeNumber = (sNum, eNum) => {
+            //sNum 부터 eNum까지의 숫자들 중에 소수를 구해주세요!
+            let array = [] //소수를 가지고 있을 배열
+            for(let j = sNum; j <= eNum; j++){
+                //2 ~ 30 -> j
+                let div = []
+                 for(let i = 1; i <=j; i++){
+                    if(j % i === 0){
+                        //console.log(i)
+                        //div += i + " "
+                     div.push(i)
+                    }
+                }
+            if(div.length == 2){
+                array.push(j)
+            }
+        } console.log(array)
+    }
+    //코드 실행 안됨 (강의 보면서 다시 오류 찾기)
+
+
+    checkPrimeNumber(7);
+
+
+
+
+
+    </script>
+</body>
+</html>

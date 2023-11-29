@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let star = [3,5,7,9,2];
+        //web page 출력 예시
+        // 3 : ***
+        // 5 : *****
+        // 7 : *******
+        // 9 : *********
+        // 2 : **
+
+        //배열의 인덱스가 0부터니까 보통 i를 0부터 시작함
+        //배열.length를 쓰면 배열이 늘어나도 자동으로 늘어남
+        //데이터 변경되더라도 작성되도록 유연하게 코드 짜는게 좋음
+        for(let i=0; i<star.length; i++){ //배열을 순환하는 반복문
+            document.write(`${star[i]} : `)
+            for(let j=0; j<star[i]; j++){
+                document.write('*')
+            }
+            document.write('<br>')
+        }
+
+        
+    </script>
+</body>
+</html>

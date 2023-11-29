@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 비교연산자
+        // 변수의 값을 비교하기 위해 사용되는 연산자
+        // 결과값은 반드시 true or false
+
+        let num1 = 10;
+        let num2 = 10;
+        let num3 = '10';
+
+        // == 값을 비교하는 연산자 (문자열, 숫자열 무관. 데이터 타입 다른 값도 같다고 여김)
+        // === type까지 같은지 비교하는 연산자
+        // JS에서는 === 권장 !
+
+        console.log(num1 == num2);
+        console.log(num1 === num2);
+        console.log(num1 == num3);
+        console.log(num1 === num3);
+
+        console.log(num1 > num2);
+        console.log(num1 < num2);
+        console.log(num1 = num2);
+        console.log(num1 >= num2);
+        console.log(num1 <= num2);
+        console.log(num1 != num2);
+        // not 연산자는 데이터 타입 비교 안함
+
+        let num4 = 3;
+        let num5 = '3';
+
+        console.log(num4 != num5); // false (데이터 타입 비교 안하니까 값만 비교)
+        
+    </script>
+</body>
+</html>

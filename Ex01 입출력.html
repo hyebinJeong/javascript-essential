@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 1. 출력
+        // 1-1 console.log 출력
+        console.log('hello World!')
+        console.error('error!')
+        // error: 프로그램에 치명적일 때 사용
+        console.warn("warning!")
+        // warning: 구동하는데 문제는 없으나 잠재적으로 위험성을 가지고 있는 경우 사용
+
+        // 1-2 alert
+        alert('Hello World!') // 팝업창으로 출력 (보통 경고창 띄울때 사용)
+
+        // 1-3 write : 문서출력
+        document.write('<h1>hello world</h1>')
+        // 위에서부터 한줄씩 출력: 인터프리터 언어
+        // 고급언어(저급언어보다 더 사람과 친숙한 언어): JS, C, Python 등
+        // 저급언어(기계어보다 사람과 친숙한 언어), 기계어(기계가 이해할 수 있는 언어) 등도 있음
+
+        // 고급언어를 기계어로 번역하는 과정: 컴파일
+        // 1. java같은 처음부터 끝까지 살펴보면서 번역하는 유형(=컴파일 스타일),
+        //    잘못되면 실행조차 안됨, 안정성 높으나 속도가 느림
+        // 2. javascript같은  한줄씩 번역하는 유형(=인터프리터 스타일)
+        //    잘못된 문장을 만나기전까지 실행됨, 실행속도가 빠름
+
+        // 2. 입력
+        // 2-1 confirm : yes or no 선택
+        var result = confirm('진행하시겠습니까?')
+        // 사용자의 실행 결과를 되돌려주는 특징이 있음(리턴타입: boolean)
+        console.log(result);
+
+        // 2-2 prompt : 사용자의 값 입력(문자열타입: string)
+        var result2 = prompt('오늘 점심은 뭐먹지?','메뉴입력')
+        console.log(result2);
+
+        
+
+    </script>
+    
+</body>
+</html>

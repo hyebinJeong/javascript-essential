@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*객체: 객체 지향 프로그래밍에서 데이터(속성)와
+        그 데이터에 관련되는 동작(절차, 방법, 기능)을 모두 포함한 개념
+        -> 내가 표현하고 싶은 사물(데이터)를 코드로 표현 하는 방법
+        -> key-value(데이터, 기능) */
+        let name = '승환'
+        let age = 20
+        // 종류, 번호, 문자보내기, 전화하기
+        function sendMessage(){
+
+        }
+        let array = ['갤럭시', '01012345678', sendMessage]
+        console.log(array[0])
+
+        //{} --> 객체 의미
+        // 객체에 데이터를 담아 줄 때는 key-value 형태로 담아 줄 수 있다!
+        let phone = {
+            kind : '갤럭시', // -> 객체의 필드값
+            number : '01047685180',
+            send : function(){
+                //this -> 객체 자신을 의미
+                console.log(this.number + '에게 메세지를 보내다')
+            },
+            call : function(){
+                console.log('전화걸기')
+            }
+            let numArray = [10,20,30],
+            numArray[3] = 40 //바로 추가 가능
+        },
+        console.log(phone.kind) // .은 앞쪽에 있는 객체로부터 뒤쪽에 있는 것을 가져오겠습니다 라는 의미
+        // 객체 안에 있는 데이터를 꺼낼 때는 객체명.key값 을 사용한다!
+        console.log(phone.kind)
+        //console.log(phone['kind'])로도 사용 가능 !
+        // === 객체명['key값']
+        console.log(phone.number)
+        phone.send()
+        //phone에 call이라는 key 값으로 '전화걸기 기능' 추가하고 싶습니다
+        // 앞쪽에서 명시하지 않아도 여기에서 생성(추가) 가능 !
+        // -> 공간이 자동으로 할당 됨
+        phone.call = function(){
+            console.log('전화걸기')
+        }
+
+        phone.call()
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //연산자 - 프로그램에서 특정한 동작을 지시하는 기호
+        let num1 = 10;
+        let num2 = 20;
+        
+        let result = num1 + num2;
+        console.log(result);
+
+        // /는 몫 연산자
+        let num3 = 7;
+        let num4 = 3;
+        
+        let result2 = num3 / num4;
+        console.log(result2);
+
+
+        // %는 나머지 연산자
+        let num5 = 7;
+        let num6 = 3;
+        
+        let result3 = num5 % num6;
+        console.log(result3);
+
+        //let money = parseInt(prompt('잔돈을 입력하세요'));
+        // 입력창 필요하니까 prompt사용, 잔돈입력은 숫자로 할거니까 parseint붙여서 숫자로 입력 가능하도록 만들기
+
+        // 16600
+                
+        // 만원 : 1개
+        // 오천원 : 1개
+        // 천원 : 1개
+        // 오백원 : 1개
+        // 백원 : 1개
+
+        let money = parseInt(prompt('잔돈을 입력하세요')) // 입력창 필요하니까 prompt사용, 잔돈입력은 숫자로 할거니까 parseint붙여서 숫자로 입력 가능하도록 만들기
+        let m = parseInt(money / 10000);
+        let o = parseInt(money % 10000 / 5000); // 만원으로 해결 안되는 나머지 단위 돈을 먼저 구한 후, 그 돈으로 오천원으로 지불 가능한 금액을 계산
+        let c = parseInt(money % 10000 % 5000 / 1000); // 만원과 오천원으로 해결 안되는 단위의 돈을 구해서 천원으로 지불 가능한 금액을 계산
+        let ob = parseInt(money % 10000 % 5000 % 1000 / 500) // 만원, 오천원, 천원으로 해결안되는 단위의 돈을 구해서 오백원으로 지불 가능한 금액을 계산
+        let b = parseInt(money % 10000 % 5000 % 1000 % 500 / 100) // 만원, 오천원, 천원, 오백원으로 해결안되는 단위의 돈을 구해서 백원으로 지불 가능한 금액을 계산
+
+        console.log('만원' + m + '개')
+        console.log('오천원' + o + '개')
+        console.log('천원' + c + '개')
+        console.log('오백원' + ob + '개')
+        console.log('백원' + b + '개')
+        
+
+
+        // let str = '';
+        // str = str + ' 만원 :' + m + '개\n';
+        // str = str +' 오천원 :' + o + '개\n';
+        // str = str +' 천원 :' + c + '개\n';
+        // str = str +' 오백원 :' + d + '개\n';
+        // str = str +' 백원 :' + b + '개\n';
+
+        // console.log(str);
+
+
+
+    // 내가 잘못 세운 식
+        // let m = parseInt(money / 10000);
+        // console.log('만원 :' + m + '개');
+        // let n = parseInt((money - m) / 5000);
+        // console.log('오천원 :' + n + '개');
+        // let l = parseInt((money - n) / 1000);
+        // console.log('천원 :' + l + '개');
+        // let o = parseInt((money - l) / 500);
+        // console.log('오백원 :' + o + '개');
+
+
+
+        // 십의자리 이하 숫자 버리기
+        // 532 -> 500
+        // 237 -> 200
+
+        // 선생님 풀이
+
+        // let inputNum = pareInt(prompt('정수 입력'));
+        // 몫 연산자 사용
+        // result4 = parseInt(inputNum / 100) * 100;
+        // console.log(result4);
+
+        // 나머지 연산자 사용
+        // let result5 = inputNum - inputNum % 100;
+        // console.log(result5);
+
+        // 가장 사람다운 방법
+        // let result6 = parseInt(inputNum / 100) + "00";
+        // console.log(result6);
+
+
+        // 잘된 풀이(짝)
+        // let n1 = prompt('숫자를 입력하세요')
+        // let n2 = parseInt(n1/100)
+        // let n3 = n2 * 100
+
+        // console.log(n3)
+
+        // 내 풀이
+        // let n4 = prompt('숫자를 입력하세요')
+        // let n5 = parseInt(n4 - (n4 % 100)) //* parseInt 할 필요 없음
+        // console.log(n5)
+
+        // 증감연산자
+        // 변수의 값을 1증가하거나 감소하는 연산자
+        // ++ or --를 변수 앞 또는 뒤에 붙여준다
+
+        let myNumber = 3;
+        console.log(++ myNumber);
+        // 먼저 더하고 출력
+        console.log(myNumber ++);
+        // 출력 먼저하고나서 값을 1증가
+        console.log(myNumber);
+
+    </script>
+</body>
+</html>

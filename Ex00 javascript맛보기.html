@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="heading">자바스크립트</h1>
+    <p id="text"> 위 텍스트를 클릭해 보세요</p>
+    <script>
+        // script태그는 하단부에 배치하는 것을 권장함
+        // </body> 태그 위쪽에 작성, 랜더링 되는 것들이 보통 위쪽에 위치함
+
+        //자바스크립트 : 브라우저 위에서 작동하는 언어
+        //서버쪽의 부담을 대폭 완화시켜줌
+        //ECMAScript = 표준안, 계속 개정됨, 여러 기업이 모인 위원회의 합의를 통해 발표
+
+        // script 태그 안에 사용
+
+        var heading = document.querySelector("#heading")
+        heading.onclick = function(){
+            heading.style.color = "red";
+        }
+    </script>
+</body>
+</html>

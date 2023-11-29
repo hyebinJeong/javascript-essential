@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 별찍기 1
+        *
+        **
+        ***
+        ****
+        *****
+        화면에 출력 */
+        
+        // 방법 1
+        // for(let i = 1; i <= 1; i++){
+        //     document.write("★");
+        // }
+        //     document.write('<br>')
+        // for(let i = 1; i <= 2; i++){
+        //     document.write("★");
+        // }
+        // document.write('<br>')
+        // for(let i = 1; i <= 3; i++){
+        //     document.write("★");
+        // }
+        // document.write('<br>')
+        // for(let i = 1; i <= 4; i++){
+        //     document.write("★");
+        // }
+        // document.write('<br>')
+        // for(let i = 1; i <= 5; i++){
+        //     document.write("★");
+        // }
+
+
+        // 방법 2
+    //     for(let j = 1; j <= 5; j++){
+    //         for(let i = 1; i <= j; i++){
+    //          document.write("★");
+    //     }
+    //     document.write("<br>");
+    // }
+
+        /* 별찍기 2
+        *****
+        ****
+        ***
+        **
+        *
+        화면에 출력 */
+
+         // 방법 1
+        // for(let i = 1; i <= 5; i++){
+        //     document.write("★");
+        // }
+        //     document.write('<br>')
+        // for(let i = 1; i <= 4; i++){
+        //     document.write("★");
+        // }
+        // document.write('<br>')
+        // for(let i = 1; i <= 3; i++){
+        //     document.write("★");
+        // }
+        // document.write('<br>')
+        // for(let i = 1; i <= 2; i++){
+        //     document.write("★");
+        // }
+        // document.write('<br>')
+        // for(let i = 1; i <= 1; i++){
+        //     document.write("★");
+        // }
+
+        //방법 2
+        // for(let j = 5; j >=1; j--){
+        //     for(let i = 1; i <= j; i++){
+        //         document.write('★')
+        //     }
+        //     document.write('<br>');
+        // }
+
+         /* 별찍기 3
+            *
+           **
+          ***
+         ****
+        *****
+        화면에 출력 */
+
+        // for(초기화구문; 조건; 반복후 실행할 명령){ }
+
+
+        // 선생님풀이 (document에 출력하기)
+        for(let i=0; i<5; i++){
+            //띄어쓰기 반복문
+            //i=0, i=1
+            for(let j =5; j>i; j--){
+                document.write('&nbsp')
+            }
+            
+            // 변수는 한 공간 {} 안에서 재선언 불가능. 다른 {}에서는 재선언 가능.
+            // 띄어쓰기 반복문과 별찍기 반복문에서 둘 다 j를 선언해줬는데 이상 없음!
+            
+            //별찍는 반복문
+            for(let j=0; j<=i; j++){
+                document.write('*')
+            }document.write('<br>')
+
+            // aaaaa*
+            // aaaa**
+            // aaa***
+            // aa****
+            // a*****
+
+        }
+
+        // console에 출력하기
+
+        for(let i =0; i<5; i++) {
+            let star = ''
+            let space = ''
+        }
+
+
+            for(let i=0; i<5; i++){
+            //띄어쓰기 반복문
+            //i=0, i=1
+            for(let j =5; j>i; j--){
+                space+= ' ' // space = space + ' '
+            }
+            
+            // 변수는 한 공간 {} 안에서 재선언 불가능. 다른 {}에서는 재선언 가능.
+            // 띄어쓰기 반복문과 별찍기 반복문에서 둘 다 j를 선언해줬는데 이상 없음!
+            
+            //별찍는 반복문
+            for(let j=0; j<=i; j++){
+                star+='*'
+            }console.log(space+star)
+
+            // aaaaa*
+            // aaaa**
+            // aaa***
+            // aa****
+            // a*****
+
+        }
+
+
+
+        // 짝풀이
+    //    for(let j = 1; j <= 5; j++){
+    //         for(let n = 1; n <= 5-j; n++){
+    //             document.write('&nbsp')
+    //         }
+    //         for(let i = 1; i <= j ; i++){
+    //             document.write( '*');
+    //         }document.write("<br>");
+    //    } 
+
+    </script>
+</body>
+</html>

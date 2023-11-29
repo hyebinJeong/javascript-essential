@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 선택정렬
+        // 1. 기준 값을 지정
+        // 2. 나머지 요소와 비교하면서 적절한 값 찾기(탐색)
+        // 3. 적절한 값을 기준위치에 할당
+        let arr = [71, 19, 23, 99, 41]
+
+        // //1 step -> 0번째에 어루리는 값 선택하기
+        // let base = arr[0] 
+        // //기준값을 이미 0번째를 넣었기때문에 
+        // //자기 자신과 비교할 필요가 없으니까 1번째부터 비교하기
+
+        // // base와 1번째 값 비교
+        // if(base > arr[1]){
+        //     let temp = base
+        //     base = arr[1]
+        //     arr[1] = temp
+        // }
+
+        // // base와 2번째 값 비교
+        // if(base > arr[2]){
+        //     let temp = base
+        //     base = arr[2]
+        //     arr[2] = temp
+        // }
+
+        // // base와 3번째 값 비교
+        // if(base > arr[3]){
+        //     let temp = base
+        //     base = arr[3]
+        //     arr[3] = temp3
+        // }
+
+        // // base와 4번째 값 비교
+        // if(base > arr[4]){
+        //     let temp = base
+        //     base = arr[4]
+        //     arr[4] = temp
+        // }
+
+        // arr[0] = base
+
+        // console.log(arr)
+
+        // console.log('==============================')// step 1 끝
+
+        // -> for문으로 줄이기
+
+        // 기준 인덱스 : 0 1 2 3
+
+        // setp 1 -> 0번째 어울리는 값 선택하기
+        // 비교 시작 인덱스 : 1 2 3 4 -> i + 1
+        
+        // let base = arr[0]
+        // for(let i = 1; i <= 4; i++){
+        //     if(base > arr[i]){
+        //         let temp = base
+        //         base = arr[i]
+        //         arr[i] = temp
+        //     }
+        // }
+        // arr[0] = base
+        // console.log(arr)       
+
+        // //setp 2 -> 1번째 어울리는 값 선택하기
+        
+        // let base = arr[1]
+        // for(let i = 2; i <= 4; i++){
+        //     if(base > arr[i]){
+        //     let temp = base
+        //     base = arr[i]
+        //     arr[i] = temp
+        //     }
+        // }
+        // arr[1] = base
+        // console.log(arr)       
+
+        // //setp 3 -> 2번째 어울리는 값 선택하기
+        
+        // let base = arr[2]
+        // for(let i = 3; i <= 4; i++){
+        //     if(base > arr[i]){
+        //     let temp = base
+        //     base = arr[i]
+        //     }
+        // }
+        // arr[i] = temp
+        // console.log(arr)  
+        
+        // //setp 4 -> 3번째 어울리는 값 선택하기
+        // let base = arr[3]
+        // for(let i = 4; i <= 4; i++){
+        //     if(base > arr[i]){
+        //     let temp = base
+        //     base = arr[i]
+        //     arr[i] = temp
+        //     }
+        // }
+        // arr[3] = base
+        // console.log(arr)  
+        
+        //-> 작동안됨. 오류찾기
+
+        //선생님 풀이
+        //for(let j=0; j<=3; j++)
+        for(let j=0; j<arr.length-2; j++){
+            let base = arr[j]
+            //for(let i=j+1; i<=4; i++)
+            for(let i=j+1; i<=arr.length-1; i++){
+                if(base > arr[i]){
+                    let temp = base
+                    base = arr[i]
+                    arr[i] = temp
+                }
+            }
+            arr[j] = base
+            console.log(arr)
+        }
+
+        //-> 더 큰 for문으로 묶기
+        
+        // let base = arr[j]
+
+        // for(let j = 0; j <= arr.length-2; j++){ // 0~3
+        //     base = arr[j];
+        //     for(let i = j+1; i <= arr.length-1; i++){
+        //         if(base > arr[i]){
+        //         let temp = base
+        //         base = arr[i]
+        //         arr[i] = temp
+        //     }
+        // }
+        // console.log(`${j}번째 ${arr[j]} 자리에 ${base} 할당`)
+        // arr[j] = base
+        // console.log(`${arr}`)
+
+        // }
+
+
+
+        
+        // for(let i = 1; i <= 4; i++){
+        //     if(base > arr[i]){
+        //     let temp = base
+        //     base = arr[i]
+        //     arr[i] = temp
+        //     }
+        // }
+        // arr[i-1] = base
+        // console.log(arr)
+
+
+
+    </script>
+</body>
+</html>

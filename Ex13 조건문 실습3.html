@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 입장료 할인 프로그램을 만들어보자
+        // 조건 1 : 나이 60세 이상 이거나 8세 미만인 경우 - 10%할인
+        // 조건 2 : 공휴일이면 10% 할인
+        // 조건 3 : 20인 이상 단체 5% 할인
+        // 조건 4 : 중복할인 가능 (10% + 10% = 20% 할인)
+
+        let ticketPrice = 20000;
+        let age = parseInt(prompt('나이 입력'));
+        let holiday = confirm('공휴일 여부')
+        let group = confirm('단체 20인 이상 여부')
+        
+        // 내가 쓴 코드(틀림)
+        // if(age >= 60 || age < 8){
+        //     console.log('입장료 : ',ticketPrice * 0.9)
+        //     }else if(holiday = true){ 
+        //         console.log('입장료 : ',ticketPrice * 0.9)
+        //     }else if(group = true){
+        //         console.log('입장료 : ', ticketPrice * 0.95)
+        //     }else{
+        //         console.log('입장료: ', ticketPrice)
+        //     };
+
+        if(age >= 60 || age < 8){
+            discount += 0.1;
+        }
+
+        //if문 분리해서 사용 가능
+        if(holiday == true){
+            discount += 0.1;
+        }
+
+        if(group == true){
+            discount +=0.05;
+        }
+
+        console.log(`입장료: ${ticketPrice * (1-discount)}`)
+
+
+
+
+    </script>
+</body>
+</html>

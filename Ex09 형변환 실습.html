@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //prompt를 이용해서 두 수를 입력받고
+        // 두 수의 덧셈 결과를 document.write를 이용해서 화면에 출력하세요
+        // ex) 2와 3의 덧셈결과는 5입니다.
+    
+        let num1 = parseInt(prompt("첫번째 숫자입력", 0));
+        let num2 = parseInt(prompt("두번째 숫자입력", 0));
+        // let num2 = parseInt(prompt("두번째 숫자입력"); 이렇게 표기해도 됨
+
+        // let num1 = (prompt("첫번째 숫자입력", 0));
+        // let num2 = (prompt("두번째 숫자입력", 0));
+        // 만약 parseInt를 생략하면, 두 숫자를 더했을 때 23 이렇게 뜸!
+
+        let plus = parseInt(num1 + num2);
+        // document.write(num1 + '와 ' + num2 + '의 덧셈결과는 ' + plus +'입니다.');
+        document.write(`${num1}와 ${num2}의 덧셈결과는 ${plus}입니다.`);
+        // 백틱으로 하는 방법 잘 기억해두기 !
+        // \n은 줄바꿈인데, html문서에서는 줄바꿈을 의미하지 않음
+        // document.write는 html문서에 출력하는것이기 때문에 \n대신 <br> 사용해야함
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 버블정렬
+        // 하나의 스탭이 끝날때마다 맨 뒤부터 하나씩 정렬이 됨
+        // 코드 리팩토링
+        let arr = [6,19,11,50,4]
+        // 앞 i : 0 1 2 3
+        // 뒤 i+1 : 1 2 3 4
+        //1 setp
+        // if(arr[0] > arr[1]){
+        //     //치환 (앞에있는게 더 클때 치환이 일어남 !)
+        //     let temp = arr[0] 
+        //     //제3의 변수 필요(그냥 바꾸면 앞 숫자가 사라지니까)
+        //     arr[0] = arr[1] //temp에 arr[0] 즉, 6을 저장해놨으니까 arr[0]에 arr[1]값을 저장해줌
+        //     arr[1] = temp // arr[1]자리에 arr[0]값 즉, 6을 저장해준다
+        // }
+        // console.log(arr)
+        // if(arr[1] > arr[2]){
+        //     let temp = arr[1]
+        //     arr[1] = arr[2]
+        //     arr[2] = temp
+        // }console.log(arr)
+        // if(arr[2] > arr[3]){
+        //     let temp = arr[2]
+        //     arr[2] = arr[3]
+        //     arr[3] = temp
+        // }console.log(arr)
+        // if(arr[3] > arr[4]){
+        //     let temp = arr[3]
+        //     arr[3] = arr[4]
+        //     arr[4] = temp
+        // }console.log(arr)
+        // step 1이 끝나면, 맨 마지막 한자리에 가장 큰 수가 위치해있음
+
+        // -> 위코드를 for문으로 묶을 수 있음
+        // for(let i = 0; i <= 3; i++){
+        //     if(arr[i] > arr[i+1]){
+        //     let temp = arr[i]
+        //     arr[i] = arr[i+1]
+        //     arr[i+1] = temp
+        //     }
+        //     console.log(arr)
+        // }
+        // console.log('==============================') //구분이라는 뜻
+
+        // // 2 step -> 3번 비교
+        
+        // for(let i = 0; i <= 2; i++){
+        //     if(arr[i] > arr[i+1]){
+        //     let temp = arr[i]
+        //     arr[i] = arr[i+1]
+        //     arr[i+1] = temp
+        //     }
+        //     console.log(arr)
+        // }
+        // console.log('==============================')
+
+        // // 3 step -> 2번 비교
+        
+        // for(let i = 0; i <= 1; i++){
+        //     if(arr[i] > arr[i+1]){
+        //     let temp = arr[i]
+        //     arr[i] = arr[i+1]
+        //     arr[i+1] = temp
+        //     }
+        //     console.log(arr)
+        // }
+        // console.log('==============================')
+
+        // // 4 step -> 1번 비교
+        
+        // for(let i = 0; i <= 0; i++){
+        //     if(arr[i] > arr[i+1]){
+        //     let temp = arr[i]
+        //     arr[i] = arr[i+1]
+        //     arr[i+1] = temp
+        //     }
+        //     console.log(arr)
+        // }
+        // console.log('==============================')
+
+        // -> 위 코드들을 큰 for문에 넣어줄 수 있음
+        //for(let j = 3; j >= 0; j--)
+        for(let j = arr.length-2; j >=0; j--){ // j: 3 2 1 0
+            for(let i = 0; i <= j; i++){
+                if(arr[i] > arr[i+1]){
+                let temp = arr[i]
+                arr[i] = arr[i+1]
+                arr[i+1] = temp
+                }
+               
+            }
+            console.log('==============================')
+
+        } console.log(arr)
+
+        //내림차순 정렬은 어떻게?
+        //제대로 되었는지 확인하려면 데이터를 바꿔보기!
+        //큰 바깥 for문은 몇번의 step을 거쳐야 하는지를 나타냄
+        //배열의 길이보다 하나 작은 횟수까지 step을 가져가게 됨
+        //하나의 step마다 뒤에서부터 하나씩 정렬되니까.
+
+    </script>
+</body>
+</html>

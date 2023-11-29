@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 1 1 2 3 5 8 11 19
+
+        /* 
+        내가 혼자 적은 것
+            num1 = 1 = fibo[0]
+            num2 = num1 = fibo[0]
+            num3 = num1 + num2 = fibo[0] + fibo[0]
+            num4 = num2 + num3 = fibo[1] + fibo[2]
+            num5 = num3 + num4 
+           */
+
+        // // 방법 1
+        // function fibo(n){
+        //     let fi = [1,1,2,3,6,9,13,21,34,55,89];
+        //     console.log(fi[n-1]);
+
+        // }
+
+        // 방법 2
+        let num1 = 1;
+        let num2 = 1;
+        let num3 = 0;
+        function fibo(n){
+            if(n <= 2){
+            console.log(1);
+            }else{
+
+                for(let i = 1; i < n - 1; i++){
+                    num3 = num1 + num2;
+                    num1 = num2;
+                    num2 = num3;
+                }
+                console.log(num3);
+            }
+        }
+       
+
+    
+
+            // // n == 3
+            // num3 = num1 + num2;
+            // // n == 4
+            // num1 = num2;
+            // num2 = num3;
+            // num3 = num1+num2;
+            // //n == 5
+            // num1 = num2;
+            // num2 = num3;
+            // num3 = num1+num2;
+
+
+
+
+
+        // 콘솔에 2가 출력
+        fibo(3);
+        //콘솔에 3이 출력
+        fibo(4);
+
+
+
+
+    </script>
+</body>
+</html>
